@@ -1,0 +1,88 @@
+{
+    "sap.app": {
+        "id": "algotechnica.fin.app",
+        "type": "application",
+        "title": "{{appTitle}}",
+        "description": "{{appDescription}}",
+        "i18n": "i18n/i18n.properties",
+        "applicationVersion": {
+            "version": "1.0.0"
+        }
+        
+    },
+    "sap.ui": {
+        "fullWidth": true,
+        "technology": "UI5",
+        "icons": {
+            "icon": "sap-icon://Fiori2/F0002"
+        },
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        },
+        "supportedThemes": [
+            "sap_fiori_3",
+            "sap_belize",
+            "sap_belize_plus"
+        ]
+    },
+    "sap.ui5": {
+        "dependencies": {
+            "minUI5Version": "1.122.2",
+            "libs": {
+                "sap.ui.layout": {"minVersion": "1.122.2"},
+                "sap.m": {"minVersion": "1.122.2"}
+            }
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "i18n/i18n.properties"}
+            },
+            "": {
+                "type": "sap.ui.model.json.JSONModel",
+                "uri": "models/fruits.json",
+                "settings": {
+                    }
+            }
+
+        },
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "viewPath": "algotechnica.fin.app",
+                "controlId": "App",
+                "controlAggregation": "pages",
+                "async": true
+            },
+            "routes": [
+                {
+                    "pattern": "",
+                    "name": "View1",
+                    "target": "View1"
+                },
+                {
+                    "pattern": "View2/{query}",
+                    "name": "View2",
+                    "target": "View2"
+                }
+            ],
+            "targets": {
+                "view1": {
+                    "viewName": "View1",
+                    "viewLevel": 1
+                },
+                "view2": {
+                    "viewName": "View2",
+                    "viewLevel": 2
+                }
+            }
+        }
+    }
+}

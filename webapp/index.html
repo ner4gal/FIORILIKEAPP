@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <!-- UI5 bootstraping -->
+        <script src="https://ui5.sap.com/resources/sap-ui-core.js"
+                data-sap-ui-libs="sap.m"
+                data-sap-ui-theme="sap_horizon",
+                data-sap-ui-resourceroots='{
+                    "algotechnica.fin.app" : "./"
+                }'
+                data-sap-ui-bindingSyntax="complex"
+        ></script>
+
+        <script>
+               var oComponentCon = new sap.ui.core.ComponentContainer({
+                   name: "algotechnica.fin.app"
+               });
+               oComponentCon.placeAt("content");   
+          
+        </script>
+
+
+    </head>
+    <body class="sapUiBody">
+        <div id="content"> </div>
+    </body>
+</html>

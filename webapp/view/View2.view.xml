@@ -1,0 +1,15 @@
+<mvc:View xmlns:tnt="sap.tnt" xmlns:footerbar="sap.ushell.ui.footerbar" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="algotechnica.fin.app.controller.View2">
+    <Page title="View 2" showNavButton="true" navButtonPress="onGoBack">
+        <content>
+            <Button text="Go to View 1" press="onGoBack"/>
+        </content>
+       <footer>
+            <Toolbar id="footerToolbar">
+                <ToolbarSpacer></ToolbarSpacer> 
+                <Button icon="sap-icon://cancel" type="Reject" press="onCancelPress" />
+                <Button  icon="sap-icon://save" type="Accept" press="onSavePress" />
+                
+            </Toolbar>
+        </footer>
+    </Page>
+</mvc:View>

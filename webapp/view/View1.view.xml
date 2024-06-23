@@ -1,0 +1,35 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    controllerName="algotechnica.fin.app.controller.View1"
+>
+    <Page title="View 1">
+        <headerContent>
+            <Button
+                icon="sap-icon://home"
+                press="onGoNext"
+            />
+        </headerContent>
+        <content>
+            <SearchField id="idSearch"></SearchField>
+            <!-- <Button text="Go to View 2" press="onGoNext"/>-->
+            <List  id="idList" items="{/fruits}" >
+                <items>
+                   <ObjectListItem  title="{name}" intro="{taste}" number="{price}" numberUnit="{curr}" icon="{image}"> 
+                   <firstStatus>
+                        <ObjectStatus text="{
+                        
+                          path: 'availability',
+                          formatter: '.formatter.getStatus'
+                        }" state="{
+                        
+                          path: 'availability',
+                          formatter: '.formatter.getStaty'  
+                        }"/>
+                    </firstStatus>
+                   </ObjectListItem>                  
+                </items>
+            </List> 
+        </content>
+    </Page>
+</mvc:View>
